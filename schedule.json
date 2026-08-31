@@ -42,14 +42,13 @@
       "label": "移動（往路）",
       "summary": "浜松 → 浅草橋、小田原で小田急に乗り換え",
       "start": "05:35",
-      "end": "10:25",
+      "end": "10:50",
       "duration_minutes": 290,
       "items": [
         {
           "time": "05:35",
           "type": "depart",
           "station": "浜松",
-          "short": "浜松 発",
           "line": "JR東海道本線",
           "destination": "興津",
           "platform": "2番線"
@@ -58,7 +57,6 @@
           "time": "06:50",
           "type": "arrive",
           "station": "静岡",
-          "short": "静岡 着",
           "platform": "1番線",
           "action": "ホームでライナー券330円を購入"
         },
@@ -66,7 +64,6 @@
           "time": "07:00",
           "type": "depart",
           "station": "静岡",
-          "short": "ライナー乗車",
           "line": "ホームライナー沼津2号",
           "destination": "沼津",
           "platform": "2番線",
@@ -75,14 +72,12 @@
         {
           "time": "07:41",
           "type": "arrive",
-          "station": "沼津",
-          "short": "沼津 着"
+          "station": "沼津"
         },
         {
           "time": "07:47",
           "type": "depart",
           "station": "沼津",
-          "short": "沼津 発",
           "line": "JR東海道本線",
           "destination": "熱海",
           "platform": "3番線"
@@ -91,14 +86,12 @@
           "time": "08:06",
           "type": "arrive",
           "station": "熱海",
-          "short": "熱海 着",
           "platform": "3番線"
         },
         {
           "time": "08:10",
           "type": "depart",
           "station": "熱海",
-          "short": "熱海 発",
           "line": "上野東京ライン",
           "destination": "宇都宮",
           "platform": "4番線",
@@ -109,41 +102,37 @@
           "time": "08:35",
           "type": "arrive",
           "station": "小田原",
-          "short": "小田原 着",
           "action": "有人窓口でSuica精算・現金3,100円",
           "warning": "ICエリアまたぎのため自動改札は通れない",
           "estimated": true
         },
         {
-          "time": "08:49",
+          "time": "08:53",
           "type": "depart",
           "station": "小田原",
-          "short": "小田急 乗車",
           "line": "小田急小田原線 快速急行",
           "destination": "新宿",
-          "platform": null
+          "platform": "10番線",
+          "note": "当駅始発"
         },
         {
-          "time": "10:06",
+          "time": "10:23",
           "type": "arrive",
           "station": "新宿",
-          "short": "新宿 着"
+          "platform": "6番線"
         },
         {
-          "time": "10:10",
+          "time": "10:30",
           "type": "depart",
           "station": "新宿",
-          "short": "総武線 乗車",
-          "line": "JR中央・総武線各停",
-          "destination": "千葉方面",
-          "platform": "13番線",
-          "estimated": true
+          "line": "JR総武線各停",
+          "destination": "津田沼",
+          "platform": "13番線"
         },
         {
-          "time": "10:25",
+          "time": "10:50",
           "type": "arrive",
           "station": "浅草橋",
-          "short": "浅草橋 着",
           "platform": "2番線",
           "note": "会場まで徒歩3分"
         }
@@ -152,16 +141,9 @@
     {
       "id": "conference",
       "label": "カンファレンス",
-      "start": "10:30",
+      "start": "11:30",
       "end": "21:00",
       "items": [
-        {
-          "start": "10:30",
-          "end": "11:25",
-          "title": "会場周辺で待機",
-          "short": "会場周辺で待機",
-          "note": "余裕約1時間"
-        },
         {
           "start": "11:30",
           "end": "11:45",
@@ -174,7 +156,7 @@
           "start": "11:45",
           "end": "12:30",
           "title": "学生限定ミニセッション＋ランチ座談会",
-          "short": "学生ミニセッション",
+          "short": "学生ランチ",
           "location": "3F Room 2",
           "contents": [
             "World 2 で刷新された新卒採用のリアル",
@@ -272,13 +254,13 @@
         {
           "start": "16:40",
           "end": "17:00",
-          "title": "直前枠",
-          "short": "直前枠",
+          "title": "おまかせスタート",
+          "short": "おまかせスタート",
           "location": "ホール",
           "session": {
-            "speaker": "？"
-          },
-          "note": "本番直前に募集した、8月の最新トピックを扱う枠。鮮度を優先し「いま話すべきこと」をお届けします。"
+            "kind": "直前枠",
+            "speaker": "Shu Suzuki"
+          }
         },
         {
           "start": "17:00",
@@ -344,7 +326,6 @@
           "type": "transfer",
           "from": "浅草橋",
           "to": "東京",
-          "short": "東京駅 着",
           "route": "総武線 → 秋葉原 → 山手線",
           "duration_minutes": 15
         },
@@ -352,7 +333,6 @@
           "time": "22:03",
           "type": "depart",
           "station": "東京",
-          "short": "ひかり669号",
           "line": "東海道新幹線 ひかり669号",
           "destination": "名古屋"
         },
@@ -360,7 +340,24 @@
           "time": "23:17",
           "type": "arrive",
           "station": "浜松",
-          "short": "浜松 着（帰宅）"
+          "short": "浜松駅（帰宅）"
+        }
+      ]
+    },
+    {
+      "id": "writing",
+      "label": "執筆",
+      "start": "23:20",
+      "end": "29:44",
+      "items": [
+        {
+          "time": "23:20",
+          "short": "帰宅、記事を書き始める"
+        },
+        {
+          "time": "29:44",
+          "short": "記事を書き終える",
+          "note": "翌 05:44"
         }
       ]
     }

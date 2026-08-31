@@ -22,7 +22,7 @@ use livesplit_core::{
 };
 use serde::Deserialize;
 
-const PLAN: &str = "予定";
+const PLAN: &str = "Schedule";
 
 fn d_true() -> bool {
     true
@@ -334,7 +334,7 @@ fn build_layout(spec: &Spec) -> Layout {
     }
     splits_settings.columns = vec![
         ColumnSettings {
-            name: "通過".into(),
+            name: "Time".into(),
             kind: ColumnKind::Time(TimeColumn {
                 start_with: ColumnStartWith::ComparisonTime,
                 update_with: ColumnUpdateWith::SplitTime,
@@ -344,7 +344,7 @@ fn build_layout(spec: &Spec) -> Layout {
             }),
         },
         ColumnSettings {
-            name: "予定差".into(),
+            name: "+/−".into(),
             kind: ColumnKind::Time(TimeColumn {
                 start_with: ColumnStartWith::Empty,
                 update_with: ColumnUpdateWith::Delta,

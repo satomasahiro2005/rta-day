@@ -8,3 +8,7 @@ testphotos/
 
 # 発表者アイコン（公式サイトから取得。再配布はしない）
 assets/speakers/
+
+# Python
+__pycache__/
+*.pyc
