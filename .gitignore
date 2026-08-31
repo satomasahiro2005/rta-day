@@ -1,0 +1,10 @@
+# 生成物
+out/
+lsrender/target/
+
+# 自分の写真とテスト素材
+photos/
+testphotos/
+
+# 発表者アイコン（公式サイトから取得。再配布はしない）
+assets/speakers/
