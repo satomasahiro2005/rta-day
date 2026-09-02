@@ -403,8 +403,8 @@ def placeholder(size: tuple[int, int], label: str = "PLACEHOLDER") -> Image.Imag
     im = Image.alpha_composite(im.convert("RGBA"),
                                Image.new("RGBA", size, (10, 13, 20, 170))).convert("RGB")
     d = ImageDraw.Draw(im)
-    d.text((w * 0.055, h * 0.11), label, font=font(FONT_TEXT, max(24, h // 28)),
-           fill=(96, 108, 128))
+    d.text((w / 2, h * 0.11), label, font=font(FONT_TEXT, max(24, h // 28)),
+           fill=(96, 108, 128), anchor="ma")
     return im
 
 
@@ -719,7 +719,7 @@ def main() -> None:
     ap.add_argument("--frame-name", default="index", choices=["index", "time"],
                     help="index=frame000.png（既定） / time=frame-HHMMSS.png")
     ap.add_argument("--icons", default="auto", choices=["auto", "symbol", "photo", "none"],
-                    help="auto=写真優先で無い行は絵文字 / symbol=全部絵文字 / photo=写真だけ")
+                    help="auto=顔→写真→グリフ / photo=写真→グリフ / symbol=グリフだけ / none=なし")
     ap.add_argument("--two-rows", action="store_true")
     ap.add_argument("--photo-time", nargs="*", metavar="FILE=HH:MM",
                     help="EXIF が無い写真に撮影時刻を手で与える")
@@ -822,7 +822,7 @@ def main() -> None:
         # セッションは発表者の顔が一番わかりやすいので、写真より優先する
         avatar = (s.raw.get("session") or {}).get("avatar")
         avatar_path = (ROOT / avatar) if avatar else None
-        if avatar_path and avatar_path.exists() and args.icons in ("auto", "symbol"):
+        if avatar_path and avatar_path.exists() and args.icons == "auto":
             s.icon = avatar_icon(avatar_path, s.block_id, out / "icons" / f"spk{i:02d}.png")
         elif s.photo and args.icons in ("auto", "photo"):
             s.icon = make_icon(s.photo, out / "icons" / f"seg{i:02d}.png")
