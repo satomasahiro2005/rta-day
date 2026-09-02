@@ -105,12 +105,6 @@ for frames (490). The height is filled by opening nearby chapters, so the pane w
 never changes between frames. The big timer does not shrink to fit, so its height is
 derived from the digit count.
 
-## Extras
-
-```bash
-python tools/heic2jpg.py SRC DST --max 3200        # HEIC → JPEG, EXIF preserved
-```
-
 ## Notes
 
 - `lsrender/src/main.rs` has `layout_units()`, a copy of livesplit-core's private
@@ -118,6 +112,7 @@ python tools/heic2jpg.py SRC DST --max 3200        # HEIC → JPEG, EXIF preserv
 - The delta column uses U+2212. Bahnschrift lacks that glyph, so the numeric font is
   Segoe UI.
 - `--layout foo.lsl` loads a LiveSplit layout file as-is.
+- `tools/heic2jpg.py SRC DST --max 3200` converts HEIC to JPEG with the EXIF kept.
 - `tools/make_test_photos.py DIR` writes dummy photos with EXIF for testing.
 
 ## License

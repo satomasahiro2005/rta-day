@@ -12,3 +12,9 @@ assets/speakers/
 # Python
 __pycache__/
 *.pyc
+
+# 記事用の一発ネタ（公開しない）
+tools/focus_text.py
+tools/reveal_gif.py
+examples/*/quotes.json
+examples/*/beats-kuro.json

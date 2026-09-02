@@ -12,8 +12,6 @@ images is here:
 | --- | --- |
 | `schedule.json` | The itinerary as it actually ran: trains, sessions, the way home, and writing the article |
 | `times.json` | Checkpoints pinned by hand — the trains taken and the moments read off the photos |
-| `quotes.json` | One line per session, for the focus-line cards |
-| `beats-kuro.json` | Script for the stacking-text GIF |
 
 ## Commands used
 
