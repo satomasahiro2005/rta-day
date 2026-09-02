@@ -380,11 +380,14 @@ fn build_layout(spec: &Spec) -> Layout {
     layout
 }
 
+/// Transcribed from livesplit-core's `rendering::component::height()`
+/// (Copyright (c) 2013 Christopher Serr and Sergey Papushin, MIT / Apache-2.0;
+/// see THIRD-PARTY.md). That module is private, so the same arithmetic lives here.
+///
 /// livesplit-core lays components out in units where a normal row is 1.0 and the
 /// nominal window is 11.5 wide. The renderer scales everything by
 /// height / total_height, so the height has to follow the width or the timer
 /// digits end up wider than the panel. `rendering::component::height` is
-/// private, so the same arithmetic lives here.
 const TWO_ROW_HEIGHT: f32 = 2.0 * 0.725 + (1.0 - 0.725);
 const PSEUDO_PIXELS: f32 = 1.0 / 24.0;
 const DEFAULT_VERTICAL_WIDTH: f32 = 11.5;

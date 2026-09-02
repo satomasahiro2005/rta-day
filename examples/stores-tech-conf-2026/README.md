@@ -33,7 +33,9 @@ python rta_day.py --schedule examples/stores-tech-conf-2026/schedule.json \
   --overlay-label "起床からの経過" --overlay "RTA {RTA} / clock {RTC}"
 ```
 
-The photos and the speakers' pictures are not in this repository.
+The photos and the speakers' pictures are not in this repository. The `session.avatar`
+paths in `schedule.json` point at files that were downloaded locally from the event's
+own site; without them the rows fall back to icon glyphs.
 
 ## What the times mean
 

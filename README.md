@@ -119,11 +119,6 @@ derived from the digit count.
 
 MIT, see [LICENSE](LICENSE).
 
-Third party:
-
-- [livesplit-core](https://github.com/LiveSplit/livesplit-core) — MIT / Apache-2.0.
-  Linked by `lsrender`; the images it renders carry no obligation.
-- [Material Icons](https://github.com/google/material-design-icons) — Apache-2.0,
-  bundled in `assets/`, licence text in `assets/MaterialIcons-LICENSE.txt`.
-- Fonts are the operating system's and are not redistributed here.
-- Not affiliated with LiveSplit.
+Third-party notices — livesplit-core (MIT / Apache-2.0), Material Icons (Apache-2.0),
+and what the bundled images do and do not contain — are in
+[THIRD-PARTY.md](THIRD-PARTY.md). Not affiliated with LiveSplit.

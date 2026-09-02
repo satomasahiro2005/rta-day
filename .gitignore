@@ -18,3 +18,4 @@ tools/focus_text.py
 tools/reveal_gif.py
 examples/*/quotes.json
 examples/*/beats-kuro.json
+tools/fetch_speakers.ps1
