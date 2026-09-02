@@ -11,6 +11,10 @@ itinerary, and composites the panel next to each photo.
 
 ![board](docs/board.png)
 
+Made with it: **[AI時代の開発を見に行く: STORES Tech Conf 2026 "World 2" 体験記](https://zenn.dev/nemut_ai/articles/stores-tech-conf-2026-world2)** —
+a day trip rendered as a run. The itinerary and the pinned times behind that article are
+in [`examples/stores-tech-conf-2026/`](examples/stores-tech-conf-2026/).
+
 ```
 schedule.json ─┐
                ├─→ rta_day.py ──→ spec.json ──→ lsrender (Rust + livesplit-core) ──→ panel PNG
@@ -66,8 +70,9 @@ Station rows are named by the station alone (`浜松駅`), and an `arrive` immed
 followed by a `depart` at the same station is dropped — a transfer is one row, not two.
 `--keep-arrivals` keeps both. `--blocks outbound` renders a subset.
 
-The bundled `schedule.json` is the author's real day at a conference; replace it with
-yours.
+`schedule.json` in the repository root is a small sample to run against. The full
+format, field by field, is [`docs/schedule.schema.json`](docs/schedule.schema.json), and
+a real one is [`examples/stores-tech-conf-2026/schedule.json`](examples/stores-tech-conf-2026/schedule.json).
 
 ## How photos are matched
 
@@ -104,8 +109,6 @@ derived from the digit count.
 
 ```bash
 python tools/heic2jpg.py SRC DST --max 3200        # HEIC → JPEG, EXIF preserved
-python tools/focus_text.py --batch quotes.json --rainbow   # manga focus-line cards
-python tools/reveal_gif.py beats.json out.gif      # lines stacking up, as a GIF
 ```
 
 ## Notes

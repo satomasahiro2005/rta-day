@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/satomasahiro2005/rta-day/blob/main/docs/schedule.schema.json",
+  "title": "rta-day schedule",
+  "description": "A day split into blocks (chapters) of items (checkpoints). Every item with a time becomes one LiveSplit segment.",
+  "type": "object",
+  "required": ["blocks"],
+  "properties": {
+    "event": {
+      "type": "object",
+      "description": "Shown in the panel title and subtitle.",
+      "properties": {
+        "name": { "type": "string", "description": "Title line of the panel." },
+        "date": { "type": "string", "format": "date", "description": "YYYY-MM-DD. All times are relative to this day; hours >= 24 roll into the next day." },
+        "venue": { "type": "string", "description": "Subtitle line. Trimmed at ＆/& when long." },
+        "address": { "type": "string" },
+        "urls": { "type": "object", "additionalProperties": { "type": "string" } }
+      },
+      "additionalProperties": true
+    },
+    "blocks": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Chapters, in order. One chapter is open at a time on the structured board.",
+      "items": {
+        "type": "object",
+        "required": ["id", "items"],
+        "properties": {
+          "id": { "type": "string", "description": "Used by --blocks and --open." },
+          "label": { "type": "string", "description": "Chapter name on the board." },
+          "summary": { "type": "string" },
+          "start": { "type": "string", "description": "HH:MM, informational." },
+          "end": { "type": "string", "description": "HH:MM. The last item's window ends here." },
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "$ref": "#/$defs/item" }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "cost": { "type": "object", "description": "Ignored by the renderer; keep your own notes here." },
+    "fare_notes": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "item": {
+      "type": "object",
+      "description": "One checkpoint. Needs either `time` or `start`.",
+      "anyOf": [{ "required": ["time"] }, { "required": ["start"] }],
+      "properties": {
+        "time": { "type": "string", "pattern": "^\\d{1,2}:\\d{2}(:\\d{2})?$", "description": "A point in time. 24:00 and later mean the next day." },
+        "start": { "type": "string", "pattern": "^\\d{1,2}:\\d{2}(:\\d{2})?$", "description": "Start of a range; used as the checkpoint time." },
+        "end": { "type": "string", "pattern": "^\\d{1,2}:\\d{2}(:\\d{2})?$", "description": "End of a range. Only the last item of a block uses it." },
+        "type": {
+          "type": "string",
+          "enum": ["depart", "arrive", "transfer", "event_end"],
+          "description": "Station rows are arrivals: photos taken on the way belong to the station ahead. Omit for sessions and activities, whose photos come after their start."
+        },
+        "station": { "type": "string", "description": "With type depart/arrive the row is named `<station>駅`." },
+        "from": { "type": "string", "description": "type transfer." },
+        "to": { "type": "string", "description": "type transfer. The row is named after this." },
+        "short": { "type": "string", "description": "Row name. Overrides the generated one; keep it short, the board is narrow." },
+        "title": { "type": "string", "description": "Full title. Goes to the caption line when it differs from `short`." },
+        "location": { "type": "string" },
+        "line": { "type": "string", "description": "Train line, caption only." },
+        "destination": { "type": "string" },
+        "platform": { "type": ["string", "null"] },
+        "action": { "type": "string", "description": "What you have to do there. Caption only." },
+        "warning": { "type": "string" },
+        "note": { "type": "string" },
+        "contents": { "type": "array", "items": { "type": "string" } },
+        "estimated": { "type": "boolean" },
+        "session": {
+          "type": "object",
+          "description": "Marks the row as a talk.",
+          "properties": {
+            "kind": { "type": "string", "description": "Opening Keynote, Closing Keynote, …" },
+            "speaker": { "type": "string" },
+            "org": { "type": "string" },
+            "avatar": { "type": "string", "description": "Path to a picture, used as the row icon. Relative to the repository root." }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

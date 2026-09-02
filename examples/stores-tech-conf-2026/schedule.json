@@ -1,0 +1,410 @@
+{
+  "event": {
+    "name": "STORES Tech Conf 2026 \"World 2\"",
+    "date": "2026-08-31",
+    "weekday": "月",
+    "venue": "浅草橋ヒューリックホール ＆ ヒューリック カンファレンス",
+    "address": "東京都台東区浅草橋1丁目22-16 ヒューリック浅草橋ビル",
+    "reception_number": "2BFP",
+    "urls": {
+      "official": "https://storesinc.tech/conf/2026",
+      "map": "https://maps.app.goo.gl/2kgMApNfuczqoLtg7"
+    }
+  },
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "起床・出発",
+      "start": "05:00",
+      "end": "05:35",
+      "items": [
+        {
+          "time": "05:00",
+          "short": "起床",
+          "title": "起床"
+        },
+        {
+          "time": "05:15",
+          "short": "ゴミ出し",
+          "title": "ゴミ出し",
+          "note": "収集日"
+        },
+        {
+          "time": "05:22",
+          "short": "自転車で駅へ",
+          "title": "自転車で浜松駅へ",
+          "note": "駐輪場"
+        }
+      ]
+    },
+    {
+      "id": "outbound",
+      "label": "移動（往路）",
+      "summary": "浜松 → 浅草橋、小田原で小田急に乗り換え",
+      "start": "05:35",
+      "end": "10:50",
+      "duration_minutes": 290,
+      "items": [
+        {
+          "time": "05:35",
+          "type": "depart",
+          "station": "浜松",
+          "line": "JR東海道本線",
+          "destination": "興津",
+          "platform": "2番線"
+        },
+        {
+          "time": "06:50",
+          "type": "arrive",
+          "station": "静岡",
+          "platform": "1番線",
+          "action": "ホームでライナー券330円を購入"
+        },
+        {
+          "time": "07:00",
+          "type": "depart",
+          "station": "静岡",
+          "line": "ホームライナー沼津2号",
+          "destination": "沼津",
+          "platform": "2番線",
+          "surcharge_jpy": 330
+        },
+        {
+          "time": "07:41",
+          "type": "arrive",
+          "station": "沼津"
+        },
+        {
+          "time": "07:47",
+          "type": "depart",
+          "station": "沼津",
+          "line": "JR東海道本線",
+          "destination": "熱海",
+          "platform": "3番線"
+        },
+        {
+          "time": "08:06",
+          "type": "arrive",
+          "station": "熱海",
+          "platform": "3番線"
+        },
+        {
+          "time": "08:10",
+          "type": "depart",
+          "station": "熱海",
+          "line": "上野東京ライン",
+          "destination": "宇都宮",
+          "platform": "4番線",
+          "transfer_minutes": 4,
+          "warning": "乗り継ぎ4分。同じホームではない"
+        },
+        {
+          "time": "08:35",
+          "type": "arrive",
+          "station": "小田原",
+          "action": "有人窓口でSuica精算・現金3,100円",
+          "warning": "ICエリアまたぎのため自動改札は通れない",
+          "estimated": true
+        },
+        {
+          "time": "08:53",
+          "type": "depart",
+          "station": "小田原",
+          "line": "小田急小田原線 快速急行",
+          "destination": "新宿",
+          "platform": "10番線",
+          "note": "当駅始発"
+        },
+        {
+          "time": "10:23",
+          "type": "arrive",
+          "station": "新宿",
+          "platform": "6番線"
+        },
+        {
+          "time": "10:30",
+          "type": "depart",
+          "station": "新宿",
+          "line": "JR総武線各停",
+          "destination": "津田沼",
+          "platform": "13番線"
+        },
+        {
+          "time": "10:50",
+          "type": "arrive",
+          "station": "浅草橋",
+          "platform": "2番線",
+          "note": "会場まで徒歩3分"
+        }
+      ]
+    },
+    {
+      "id": "conference",
+      "label": "カンファレンス",
+      "start": "11:30",
+      "end": "21:00",
+      "items": [
+        {
+          "start": "11:30",
+          "end": "11:45",
+          "title": "受付",
+          "short": "受付",
+          "location": "2F",
+          "warning": "申請フォームには3Fとあったが2Fに変更"
+        },
+        {
+          "start": "11:45",
+          "end": "12:30",
+          "title": "学生限定ミニセッション＋ランチ座談会",
+          "short": "学生ランチ",
+          "location": "3F Room 2",
+          "contents": [
+            "World 2 で刷新された新卒採用のリアル",
+            "STORES に新卒入社し活躍中の社員の体験談",
+            "お菓子を食べながらの座談会"
+          ]
+        },
+        {
+          "start": "12:30",
+          "end": "13:00",
+          "title": "開場",
+          "short": "開場",
+          "location": "ホール"
+        },
+        {
+          "start": "13:00",
+          "end": "13:10",
+          "title": "開会式",
+          "short": "開会式",
+          "location": "ホール"
+        },
+        {
+          "start": "13:10",
+          "end": "13:50",
+          "title": "World 2",
+          "short": "Opening Keynote",
+          "location": "ホール",
+          "session": {
+            "kind": "Opening Keynote",
+            "speaker": "ykpythemind",
+            "org": "プロダクト統合本部",
+            "avatar": "assets/speakers/ykpythemind.webp"
+          }
+        },
+        {
+          "start": "13:55",
+          "end": "14:15",
+          "title": "1人がチームになる、開発組織のフラクタル",
+          "short": "開発組織のフラクタル",
+          "location": "ホール",
+          "session": {
+            "speaker": "kitapashi",
+            "org": "プロダクト統合本部",
+            "avatar": "assets/speakers/kitapashi.webp"
+          }
+        },
+        {
+          "start": "14:30",
+          "end": "14:50",
+          "title": "プロトタイピング with デザインシステム",
+          "short": "プロトタイピング",
+          "location": "ホール",
+          "session": {
+            "speaker": "wattanx",
+            "org": "プロダクト統合本部",
+            "avatar": "assets/speakers/wattanx.webp"
+          }
+        },
+        {
+          "start": "14:55",
+          "end": "15:15",
+          "title": "プロダクトマネージャーは World 2 でどう越境し、価値を発揮するのか",
+          "short": "PM はどう越境するか",
+          "location": "ホール",
+          "session": {
+            "speaker": "mario",
+            "org": "プロダクトマネジメント本部",
+            "avatar": "assets/speakers/mario.webp"
+          }
+        },
+        {
+          "start": "15:15",
+          "end": "16:15",
+          "title": "休憩（Ask the Speaker・ポスター・展示ブース）",
+          "short": "休憩・ブース巡り",
+          "contents": [
+            "Ask the Speaker（登壇者への質問・相談）",
+            "ポスターセッション",
+            "ZINE配布",
+            "体験・展示ブース（AIアシスタント「STORES Play」中心）"
+          ]
+        },
+        {
+          "start": "16:15",
+          "end": "16:35",
+          "title": "依頼の受付から要件定義・実装・テストまで、非エンジニアが AI と回す Salesforce 開発",
+          "short": "非エンジニアの AI 開発",
+          "location": "ホール",
+          "session": {
+            "speaker": "杉山",
+            "org": "BPR本部",
+            "avatar": "assets/speakers/sugiyama.webp"
+          }
+        },
+        {
+          "start": "16:40",
+          "end": "17:00",
+          "title": "おまかせスタート",
+          "short": "おまかせスタート",
+          "location": "ホール",
+          "session": {
+            "kind": "直前枠",
+            "speaker": "Shu Suzuki"
+          }
+        },
+        {
+          "start": "17:00",
+          "end": "17:40",
+          "title": "休憩",
+          "short": "休憩",
+          "contents": [
+            "Ask the Speaker",
+            "ポスターセッション",
+            "展示ブース"
+          ]
+        },
+        {
+          "start": "17:40",
+          "end": "18:00",
+          "title": "World 2 で、World 2 の Database を作る",
+          "short": "World 2 の Database",
+          "location": "ホール",
+          "session": {
+            "speaker": "Satomi Nishiyama",
+            "org": "プロダクト統合本部",
+            "avatar": "assets/speakers/satomi-nishiyama.webp"
+          }
+        },
+        {
+          "start": "18:05",
+          "end": "18:45",
+          "title": "猫の手も借りたい",
+          "short": "Closing Keynote",
+          "location": "ホール",
+          "session": {
+            "kind": "Closing Keynote",
+            "speaker": "shia",
+            "org": "技術推進本部",
+            "avatar": "assets/speakers/shia.webp"
+          }
+        },
+        {
+          "start": "18:45",
+          "end": "21:00",
+          "title": "閉会式・懇親会",
+          "short": "閉会式・懇親会",
+          "location": "ホール"
+        }
+      ]
+    },
+    {
+      "id": "return",
+      "label": "移動（復路）",
+      "start": "21:00",
+      "end": "23:17",
+      "confirmed": false,
+      "note": "懇親会の終わり方次第。当日の状況を見て確定させる",
+      "items": [
+        {
+          "time": "21:00",
+          "type": "event_end",
+          "title": "懇親会終了",
+          "short": "懇親会終了"
+        },
+        {
+          "time": "21:15",
+          "type": "transfer",
+          "from": "浅草橋",
+          "to": "東京",
+          "route": "総武線 → 秋葉原 → 山手線",
+          "duration_minutes": 15
+        },
+        {
+          "time": "22:03",
+          "type": "depart",
+          "station": "東京",
+          "line": "東海道新幹線 ひかり669号",
+          "destination": "名古屋"
+        },
+        {
+          "time": "23:17",
+          "type": "arrive",
+          "station": "浜松",
+          "short": "浜松駅（帰宅）"
+        }
+      ]
+    },
+    {
+      "id": "writing",
+      "label": "執筆",
+      "start": "23:20",
+      "end": "29:44",
+      "items": [
+        {
+          "time": "23:20",
+          "short": "帰宅、記事を書き始める"
+        },
+        {
+          "time": "29:44",
+          "short": "記事を書き終える",
+          "note": "翌 05:44"
+        }
+      ]
+    }
+  ],
+  "cost": {
+    "currency": "JPY",
+    "outbound": {
+      "selected": true,
+      "breakdown": [
+        {
+          "segment": "浜松 → 小田原（JR）",
+          "amount": 3100,
+          "payment": "現金・窓口精算"
+        },
+        {
+          "segment": "ホームライナー沼津2号 ライナー券",
+          "amount": 330,
+          "payment": "券売機"
+        },
+        {
+          "segment": "小田原 → 新宿（小田急）",
+          "amount": 901,
+          "payment": "IC"
+        },
+        {
+          "segment": "新宿 → 浅草橋（JR）",
+          "amount": 209,
+          "payment": "IC"
+        }
+      ],
+      "total": 4540
+    },
+    "return": {
+      "breakdown": [
+        {
+          "segment": "東京 → 浜松（ひかり・指定席）",
+          "amount": 8440,
+          "estimated": true
+        }
+      ],
+      "total": 8440
+    },
+    "day_total": 12980
+  },
+  "fare_notes": [
+    "200km超で東京都区内に入るため、JR通しなら「浜松→東京都区内」4,510円で浅草橋まで有効",
+    "途中で運賃を打ち切ると割高になる（静岡で切ると約310円増）",
+    "SuicaとTOICAは熱海をまたいで自動改札を通れない"
+  ]
+}
