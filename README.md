@@ -9,7 +9,7 @@ components — split list, deltas, gold/green/red colouring, Previous Segment,
 Current Pace — from a JSON spec. Python reads your photos' EXIF, matches them to the
 itinerary, and composites the panel next to each photo.
 
-![board](docs/board.png)
+<img src="docs/frame.png" alt="a photo with the timer pane beside it" width="760">
 
 Made with it: **[AI時代の開発を見に行く: STORES Tech Conf 2026 "World 2" 体験記](https://zenn.dev/nemut_ai/articles/stores-tech-conf-2026-world2)** —
 a day trip rendered as a run. The itinerary and the pinned times behind that article are
@@ -51,7 +51,7 @@ python rta_day.py --photos ~/DCIM --interpolate     # the whole set
 | `board.png` | every checkpoint in one tall board |
 | `result.png` | finish card with the total time |
 
-![frame](docs/frame.png)
+<img src="docs/board.png" alt="the whole day as one split board" width="300">
 
 ## Writing an itinerary
 
